@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: products_global
+    description: "Global product catalog built from regional sources."
+
+    columns:
+      - name: product_id
+        description: "Product identifier."
+        data_tests:
+          - not_null
+
+      - name: product_name
+        description: "Product name."
+        data_tests:
+          - not_null
