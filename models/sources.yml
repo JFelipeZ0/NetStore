@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: netstore
+    database: NetStoreStudio
+    schema: dbo
+    tables:
+      - name: products_usa
+      - name: products_colombia
+      - name: products_india
+      - name: products_japan
+      - name: products_china
+      - name: products_eu
+      - name: products_uk
+      - name: products_mexico
+      - name: products_venezuela
+      - name: exchange_rates
