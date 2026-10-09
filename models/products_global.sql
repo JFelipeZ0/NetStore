@@ -3,7 +3,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'USA' as region
 from {{ source('netstore', 'products_usa') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -16,7 +16,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'Colombia' as region
 from {{ source('netstore', 'products_colombia') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -29,7 +29,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'India' as region
 from {{ source('netstore', 'products_india') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -42,7 +42,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'Japan' as region
 from {{ source('netstore', 'products_japan') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -55,7 +55,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'China' as region
 from {{ source('netstore', 'products_china') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -68,7 +68,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     country as region
 from {{ source('netstore', 'products_eu') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -81,7 +81,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     country as region
 from {{ source('netstore', 'products_uk') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -94,7 +94,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'Mexico' as region
 from {{ source('netstore', 'products_mexico') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
@@ -107,7 +107,7 @@ select
     product_name,
     artist,
     category,
-    price * exchange_rates.usd_rate as price,
+    CAST(price * exchange_rates.usd_rate AS DECIMAL(18,2)) as price,
     'Venezuela' as region
 from {{ source('netstore', 'products_venezuela') }}
 join {{ source('netstore', 'exchange_rates') }} exchange_rates
